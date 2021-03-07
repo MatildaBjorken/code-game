@@ -4,6 +4,8 @@ const questionCounterText = document.getElementById('questionCounter')
 const scoreText = document.getElementById('score')
 const progressText = document.getElementById('progressText')
 const progressBarFull = document.getElementById('progressBarFull')
+const loader = document.getElementById('loader')
+const game = document.getElementById('game')
 
 //starting values
 let currentQuestion = {}
@@ -12,36 +14,38 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-let questions = [
-    {
-        question: 'Inside which HTML element do we put the JavaScript??',
-        choice1: '<script>',
-        choice2: '<javascript>',
-        choice3: '<js>',
-        choice4: '<scripting>',
-        answer: 1,
-    },
-    {
-        question:
-            "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        choice1: "<script href='xxx.js'>",
-        choice2: "<script name='xxx.js'>",
-        choice3: "<script src='xxx.js'>",
-        choice4: "<script file='xxx.js'>",
-        answer: 3,
-    },
-    {
-        question: " How do you write 'Hello World' in an alert box?",
-        choice1: "msgBox('Hello World');",
-        choice2: "alertBox('Hello World');",
-        choice3: "msg('Hello World');",
-        choice4: "alert('Hello World');",
-        answer: 4,
-    },
-];
+let questions = []
+
+fetch('https://opentdb.com/api.php?amount=10&category=18&type=multiple').then(resp =>{
+    return resp.json()
+}).then(loadedQuestions => {
+    //return loadedquestion, everytime map - format the question 
+   questions = loadedQuestions.results.map(loadedQuestion =>{
+        const apiQuestion = {
+            question: loadedQuestion.question
+        }
+
+        const answerChoices = [...loadedQuestion.incorrect_answers]
+        apiQuestion.answer = Math.floor(Math.random() * 3 ) + 1 
+        //not 0 based so minus 1, dont remove any element with 0
+        answerChoices.splice(apiQuestion.answer -1, 0, loadedQuestion.correct_answer)
+
+        //itterate though the answe choices, and put them as answe 1,2,3,4 on the apiquestion 
+        answerChoices.forEach((choice, index) => {
+            apiQuestion['choice' + (index+1)] = choice
+        })
+
+        return apiQuestion
+    })
+   
+    startGame()
+
+}).catch (error => {
+    console.error(error)
+})
 
 const correctPoints = 10
-const maxQuestions = 3
+const maxQuestions = 10
 
 //start the game with
 startGame = () =>{
@@ -50,11 +54,15 @@ startGame = () =>{
     // take the array from questions and put them here
     availableQuestions = [...questions]
     getNewQuestion()
+    
+    game.classList.remove('hidden')
+    loader.classList.add('hidden')
 }
 
 getNewQuestion = () =>{
 
     if(availableQuestions.length === 0 || questionCounter >= maxQuestions){
+        localStorage.setItem('recentScore', score)
         //ends
         return window.location.assign('/end.html')
     }
@@ -117,7 +125,6 @@ addScore = nr => {
     scoreText.innerText = score
 }
 
-startGame()
 
 
 

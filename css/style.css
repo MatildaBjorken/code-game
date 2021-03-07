@@ -11,6 +11,10 @@
 	padding: 0;
 	color: #333;
   }
+
+  p{
+	font-size: 1.5rem;
+  }
  
 
   h1,
@@ -40,7 +44,7 @@
   }
   
   h2 {
-	font-size: 4.2rem;
+	font-size: 3.5rem;
 	margin-bottom: 4rem;
 	font-weight: 700;
   }
@@ -54,7 +58,7 @@
   
 .main{
 	
-	background-image: url(./mark.svg);
+	background-image: url(../images/markq.svg);
 }
 
 .game{
@@ -136,7 +140,7 @@ form {
 	margin-bottom: 1rem;
 	width: 20rem;
 	padding: 1.5rem;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	border: none;
 	box-shadow: 0 0.1rem 1.4rem 0 rgba(255, 255, 255, 0.5);
   }
@@ -151,5 +155,43 @@ form {
 
 
   .main-end{
-	background-image: url(./eyes.svg);
+	background-image: url(../images/eyes.svg);
+  }
+
+  /* Show red borders when filled, but invalid */
+input[data-state="invalid"] {
+	border-color: hsl(0, 76%, 50%);;
+  }
+  
+  /* Show green borders when valid */
+  input[data-state="valid"] {
+	border-color: hsl(120, 76%, 50%);
+  }
+
+
+  @media only screen and (max-width: 600px){
+	h1 {
+		font-size: 4rem;
+		color: rgb(255, 255, 255);
+	  -webkit-text-fill-color: #9faef8; /* Will override color (regardless of order) */
+	  -webkit-text-stroke-width: 2px;
+	  -webkit-text-stroke-color: rgb(255, 255, 255);
+	
+		margin-bottom: 5rem;
+	  }
+	  
+	  h1 > span {
+		font-size: 2.4rem;
+		font-weight: 500;
+	  }
+
+	
+	  p{
+		font-size: 1.2rem;
+	  }
+
+	  .btn {
+		font-size: 1.5rem;
+		
+	  }
   }
