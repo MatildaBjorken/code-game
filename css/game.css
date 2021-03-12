@@ -1,136 +1,129 @@
-.question-text{
-    text-align: center;
+.question-text {
+  text-align: center;
 }
 
 .choice-container {
-    display: flex;
-    margin-bottom: 0.9rem;
-    
-    font-size: 1.8rem;
-    border: 3px solid rgba(255, 255, 255, 0.25);
-    background-color: white;
-  }
-  
-  
-  .choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 255, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
-  }
+  display: flex;
+  margin-bottom: 0.9rem;
 
-  .choice-container:active {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 255, 0);
-    border: 3px solid rgba(255, 255, 255, 0);
-  }
-  
-  .choice-prefix {
-    padding: 1.5rem 2.5rem;
-    background-color: #9faef8;
-    color: white;
-  }
-  
-  .choice-text {
-    padding: 1.5rem;
-    width: 100%;
-    
-  }
-  
-  .correct {
-    background-color: #5ae87b;
-  }
-  
-  .incorrect {
-    background-color: #f34456;
-  }
+  font-size: 1.8rem;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  background-color: white;
+}
 
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 255, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
 
+.choice-container:active {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 255, 0);
+  border: 3px solid rgba(255, 255, 255, 0);
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #9faef8;
+  color: white;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.correct {
+  background-color: #5ae87b;
+}
+
+.incorrect {
+  background-color: #f34456;
+}
 
 #info {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.info-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 3px solid #454e5a;
+  margin-top: 1.5rem;
+}
+
+#progressBarFull {
+  height: 3.4rem;
+  background-color: #ffffff;
+  width: 0%;
+}
+
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #7d93e2;
+  width: 13rem;
+  height: 13rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .choice-container {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+  }
+
+  #progressBar {
+    width: 15rem;
+    height: 3rem;
+    border: 2px solid #454e5a;
+  }
+
+  #progressBarFull {
+    height: 2.6rem;
+  }
+
+  .game {
+    max-width: 28rem;
+  }
+
   .info-prefix {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
-  
-  .info-main-text {
-    text-align: center;
-  }
-  
-  #progressBar {
-    width: 20rem;
-    height: 4rem;
-    border: 3px solid #454e5a;
-    margin-top: 1.5rem;
-  }
-  
-  #progressBarFull {
-    height: 3.4rem;
-    background-color: #ffffff;
-    width: 0%;
-  }
-
   #loader {
-    border: 1.6rem solid white;
+    border: 1rem solid white;
     border-radius: 50%;
-    border-top: 1.6rem solid #7d93e2;
-    width: 13rem;
-    height: 13rem;
+    border-top: 1rem solid #7d93e2;
+    width: 8rem;
+    height: 8rem;
     animation: spin 2s linear infinite;
   }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .choice-container {
-       
-        font-size: 1.4rem;
-        
-      }
-
-      h2{
-        
-          font-size: 1.8rem;
-          -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
-          -webkit-text-stroke-width: 0px;
-          -webkit-text-stroke-color: rgb(255, 255, 255);
-      }
-
-      #progressBar {
-        width: 15rem;
-        height: 3rem;
-        border: 2px solid #454e5a;
-      }
-
-      #progressBarFull {
-        height: 2.6rem;
-      }
-
-      .game{
-        max-width: 28rem;
-      }
-
-      .info-prefix {
-        text-align: center;
-        font-size: 1.4rem;
-      }
-      #loader {
-        border: 1rem solid white;
-        border-radius: 50%;
-        border-top: 1rem solid #7d93e2;
-        width: 8rem;
-        height: 8rem;
-        animation: spin 2s linear infinite;
-      }
-  }
+}

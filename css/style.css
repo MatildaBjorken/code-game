@@ -1,197 +1,188 @@
 :root {
-	background-color: #9faef8;
-	font-size: 62.5%;
+  background-color: #9faef8;
+  font-size: 62.5%;
+}
 
-  }
-  
-  * {
-	box-sizing: border-box;
-	font-family: 'Krona One', sans-serif;
-	margin: 0;
-	padding: 0;
-	color: #333;
-  }
+* {
+  box-sizing: border-box;
+  font-family: 'Krona One', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-  p{
-	font-size: 1.5rem;
-  }
- 
+p {
+  font-size: 1.5rem;
+}
 
-  h1,
-  h2,
-  h3,
-  h4 {
-	margin-bottom: 1rem;
-	-webkit-text-fill-color: #9faef8; /* Will override color (regardless of order) */
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+  -webkit-text-fill-color: #9faef8; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
+}
 
-  }
-  
-  h1 {
-	font-size: 5.4rem;
-	color: rgb(255, 255, 255);
+h1 {
+  font-size: 5.4rem;
+  color: rgb(255, 255, 255);
   -webkit-text-fill-color: #9faef8; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
 
-	margin-bottom: 5rem;
-  }
-  
-  h1 > span {
-	font-size: 2.4rem;
-	font-weight: 500;
-  }
-  
-  h2 {
-	font-size: 3.5rem;
-	margin-bottom: 4rem;
-	font-weight: 700;
-  }
-  
-  h3 {
-	font-size: 2.8rem;
-	font-weight: 500;
-  }
-  
-  /* UTILITIES */
-  
-.main{
-	
-	background-image: url(../images/markq.svg);
+  margin-bottom: 5rem;
 }
 
-.game{
-	max-width: 80rem;
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
-  .container {
-	
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
 
-	margin: 0 auto;
-  }
-  
-  .container > * {
-	width: 100%;
-  }
-  
-  .flex-column {
-	display: flex;
-	flex-direction: column;
-  }
-  
-  .flex-center {
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .justify-center {
-	justify-content: center;
-  }
-  
-  .text-center {
-	text-align: center;
-  }
-  
-  .hidden {
-	display: none;
-  }
-  
-  /* BUTTONS */
-  .btn {
-	font-size: 1.8rem;
-	padding: 1rem 0;
-	width: 20rem;
-	text-align: center;
-	border: 2px solid #ffffff;
-	margin-bottom: 1rem;
-	text-decoration: none;
-	color: #ffffff;
-	background-color: #9faef8;
-  }
-  
-  .btn:hover {
-	cursor: pointer;
-	box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 255, 0.5);
-	transform: translateY(-0.1rem);
-	transition: transform 150ms;
-  }
-  
-  .btn[disabled]:hover {
-	cursor: not-allowed;
-	box-shadow: none;
-	transform: none;
-  }
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+/* UTILITIES */
+
+.main {
+  background-image: url(../images/markq.svg);
+}
+
+.game {
+  max-width: 80rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+.container > * {
+  width: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BUTTONS */
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 2px solid #ffffff;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #9faef8;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 255, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
 
 /* FORMS */
 form {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  }
-  
-  input {
-	margin-bottom: 1rem;
-	width: 20rem;
-	padding: 1.5rem;
-	font-size: 1.5rem;
-	border: none;
-	box-shadow: 0 0.1rem 1.4rem 0 rgba(255, 255, 255, 0.5);
-  }
-  
-  input::placeholder {
-	color: #aaa;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(255, 255, 255, 0.5);
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  outline: none;
+}
+
+.main-end {
+  background-image: url(../images/eyes.svg);
+}
+
+/* Show red borders when filled, but invalid */
+input[data-state='invalid'] {
+  border-color: hsl(0, 76%, 50%);
+}
+
+/* Show green borders when valid */
+input[data-state='valid'] {
+  border-color: hsl(120, 76%, 50%);
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: #9faef8; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+
+    margin-bottom: 5rem;
   }
 
-  input:focus{
-	outline: none;
+  h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
   }
 
-
-  .main-end{
-	background-image: url(../images/eyes.svg);
+  p {
+    font-size: 1.2rem;
   }
 
-  /* Show red borders when filled, but invalid */
-input[data-state="invalid"] {
-	border-color: hsl(0, 76%, 50%);;
+  .btn {
+    font-size: 1.5rem;
   }
-  
-  /* Show green borders when valid */
-  input[data-state="valid"] {
-	border-color: hsl(120, 76%, 50%);
-  }
-
-
-  @media only screen and (max-width: 600px){
-	h1 {
-		font-size: 4rem;
-		color: rgb(255, 255, 255);
-	  -webkit-text-fill-color: #9faef8; /* Will override color (regardless of order) */
-	  -webkit-text-stroke-width: 2px;
-	  -webkit-text-stroke-color: rgb(255, 255, 255);
-	
-		margin-bottom: 5rem;
-	  }
-	  
-	  h1 > span {
-		font-size: 2.4rem;
-		font-weight: 500;
-	  }
-
-	
-	  p{
-		font-size: 1.2rem;
-	  }
-
-	  .btn {
-		font-size: 1.5rem;
-		
-	  }
-  }
+}

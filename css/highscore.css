@@ -1,20 +1,18 @@
 #highScoresList {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 5rem;
-  }
-  
-  .high-score {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .high-score:hover {
-    transform: scale(1.025);
-  }
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 5rem;
+}
 
+.high-score {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-  .highscore-main{
+.high-score:hover {
+  transform: scale(1.025);
+}
 
-	background-image: url(../images/marken.svg);
-  }
+.highscore-main {
+  background-image: url(../images/marken.svg);
+}
