@@ -64,7 +64,7 @@ getNewQuestion = () =>{
     if(availableQuestions.length === 0 || questionCounter >= maxQuestions){
         localStorage.setItem('recentScore', score)
         //ends
-        return window.location.assign('/end.html')
+        return window.location.assign('./end.html')
     }
     //incriment by one when starting the game
     questionCounter++
